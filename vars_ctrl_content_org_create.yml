@@ -30,7 +30,7 @@ controller_user_accounts:
  
 controller_roles:
   # Org admin role can be applied to users only
-  - user: pcs_admin_org
+  - user: admin
     lookup_organization: PCS-DUMMY
     organization: PCS-DUMMY
     role: admin
