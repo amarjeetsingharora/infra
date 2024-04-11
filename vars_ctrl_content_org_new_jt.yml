@@ -1,0 +1,39 @@
+# This needs to be run by automation content administrator
+ 
+controller_hostname: controller.lab.example.com
+controller_username: admin
+controller_password: redhat
+controller_validate_certs: false
+ 
+controller_configuration_secure_logging: false
+controller_configuration_credentials_secure_logging: false
+controller_configuration_projects_async_retries: 60
+controller_user_default_password: Foobar_12
+ 
+# This is the most simple example of adding a new job template
+# for a team at AAP and then configuring the needed permissions.
+ 
+# These variables are defined for the infra.controller_configuration
+# collection, those roles utilize the ansible.controller collection.
+# See their documentation at:
+#
+# https://console.redhat.com/ansible/automation-hub/repo/validated/infra/controller_configuration/
+# https://console.redhat.com/ansible/automation-hub/repo/published/ansible/controller/
+ 
+controller_templates:
+  - name: pcs-jt-linux-tweak
+    description: PCS Linux tweak JT
+    job_type: run
+    organization: PCS-DUMMY
+    inventory: pcs-inv-linux
+    project: pcs-proj-linux
+    playbook: example.yml
+    credentials: pcs-cred-linux
+    verbosity: "0"
+ 
+controller_roles:
+  # Allow "Linux team" members to run the Linux tweak job template
+  - job_template: pcs-jt-linux-tweak
+    lookup_organization: PCS-DUMMY
+    team: pcs-linux
+    role: execute

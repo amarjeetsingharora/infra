@@ -1,0 +1,7 @@
+---
+- name: Configuration automation controller
+  hosts: localhost
+  become: false
+  gather_facts: false
+  roles:
+   - infra.controller_configuration.dispatch
