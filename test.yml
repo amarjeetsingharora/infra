@@ -3,5 +3,6 @@
   hosts: localhost
   become: false
   gather_facts: false
+  vars_files: vars_ctrl_content_org_new_jt.yml
   roles:
    - infra.controller_configuration.dispatch
