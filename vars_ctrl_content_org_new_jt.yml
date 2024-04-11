@@ -20,20 +20,17 @@ controller_user_default_password: Foobar_12
 # https://console.redhat.com/ansible/automation-hub/repo/validated/infra/controller_configuration/
 # https://console.redhat.com/ansible/automation-hub/repo/published/ansible/controller/
  
-controller_templates:
-  - name: pcs-jt-linux-tweak
-    description: PCS Linux tweak JT
-    job_type: run
+controller_organizations:
+  - name: PCS-DUMMY
+ 
+controller_user_accounts:
+  # Example admin for managing users and teams
+  - username: pcs_admin_org
     organization: PCS-DUMMY
-    inventory: pcs-inv-linux
-    project: pcs-proj-linux
-    playbook: example.yml
-    credentials: pcs-cred-linux
-    verbosity: "0"
  
 controller_roles:
-  # Allow "Linux team" members to run the Linux tweak job template
-  - job_template: pcs-jt-linux-tweak
+  # Org admin role can be applied to users only
+  - user: pcs_admin_org
     lookup_organization: PCS-DUMMY
-    team: pcs-linux
-    role: execute
+    organization: PCS-DUMMY
+    role: admin
