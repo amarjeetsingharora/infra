@@ -25,7 +25,7 @@ controller_organizations:
  
 controller_user_accounts:
   # Example admin for managing users and teams
-  - username: pcs_admin_org
+  - username: admin
     organization: PCS-DUMMY
  
 controller_roles:
