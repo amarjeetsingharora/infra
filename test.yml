@@ -15,8 +15,6 @@
       ansible.builtin.include_vars:
         dir:  ./yaml
         ignore_files: [controller_config_yml.template]
-        extensions:
-          - ["yml"]
     - name: Call dispatch role
       ansible.builtin.include_role:
         name: infra.controller_configuration.dispatch
