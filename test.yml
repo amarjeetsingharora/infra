@@ -4,8 +4,16 @@
   become: false
   gather_facts: false
   vars_files: vars_ctrl_content_org_create.yml
+  pre_tasks:
+    - name: include vars 
+      ansible.builtin.include_vars:
+        dir:  ./yaml
+        ignore_files: [controller_config_yml.template]
+        extensions:
+          - ["yml"]
   roles:
-   - infra.controller_configuration.dispatch
+   - {infra.controller_configuration.orgnazations, when: controller_organizations is defined}
+  
   # tasks:
   #   - name: include variable
   #     ansible.builtin.include_vars:
