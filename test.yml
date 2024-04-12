@@ -12,7 +12,7 @@
         extensions:
           - ["yml"]
   roles:
-   - {infra.controller_configuration.orgnazations, when: controller_organizations is defined}
+   - {infra.controller_configuration.organizations, when: controller_organizations is defined}
   
   # tasks:
   #   - name: include variable
