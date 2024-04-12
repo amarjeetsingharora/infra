@@ -20,17 +20,26 @@
 # https://console.redhat.com/ansible/automation-hub/repo/validated/infra/controller_configuration/
 # https://console.redhat.com/ansible/automation-hub/repo/published/ansible/controller/
  
+# controller_organizations:
+#   - name: PCS-DUMMY
+ 
+# controller_user_accounts:
+#   # Example admin for managing users and teams
+#   - username: admin
+#     organization: PCS-DUMMY
+ 
+# controller_roles:
+#   # Org admin role can be applied to users only
+#   - user: admin
+#     lookup_organization: PCS-DUMMY
+#     organization: PCS-DUMMY
+#     role: admin
+---
 controller_organizations:
-  - name: PCS-DUMMY
- 
-controller_user_accounts:
-  # Example admin for managing users and teams
-  - username: admin
-    organization: PCS-DUMMY
- 
-controller_roles:
-  # Org admin role can be applied to users only
-  - user: admin
-    lookup_organization: PCS-DUMMY
-    organization: PCS-DUMMY
-    role: admin
+  - name: Satellite
+  - name: Default
+  - name: Test-dispatch-dependencies
+    galaxy_credentials:
+      - galaxy-server
+    notification_templates_approvals:
+      - Email notification
