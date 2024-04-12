@@ -3,7 +3,6 @@
   hosts: localhost
   become: false
   gather_facts: false
-  vars_files: vars_ctrl_content_org_create.yml
   pre_tasks:
     - name: include vars 
       ansible.builtin.include_vars:
