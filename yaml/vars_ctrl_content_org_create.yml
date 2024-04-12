@@ -1,14 +1,14 @@
 # This needs to be run by automation content administrator
  
-controller_hostname: controller.lab.example.com
-controller_username: admin
-controller_password: redhat
-controller_validate_certs: false
+# controller_hostname: controller.lab.example.com
+# controller_username: admin
+# controller_password: redhat
+# controller_validate_certs: false
  
-controller_configuration_secure_logging: false
-controller_configuration_credentials_secure_logging: false
-controller_configuration_projects_async_retries: 60
-controller_user_default_password: Foobar_12
+# controller_configuration_secure_logging: false
+# controller_configuration_credentials_secure_logging: false
+# controller_configuration_projects_async_retries: 60
+# controller_user_default_password: Foobar_12
  
 # This is the most simple example of adding a new job template
 # for a team at AAP and then configuring the needed permissions.
