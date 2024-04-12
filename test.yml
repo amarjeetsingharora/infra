@@ -3,7 +3,7 @@
   hosts: localhost
   become: false
   gather_facts: false
-  pre_tasks:
+  tasks:
     - name: include vars 
       ansible.builtin.include_vars:
         dir:  ./yaml
