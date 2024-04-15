@@ -1,9 +1,9 @@
 # This needs to be run by automation content administrator
  
-controller_hostname: controller.lab.example.com
-controller_username: admin
-controller_password: redhat
-controller_validate_certs: false
+# controller_hostname: controller.lab.example.com
+# controller_username: admin
+# controller_password: redhat
+# controller_validate_certs: false
  
 # controller_configuration_secure_logging: false
 # controller_configuration_credentials_secure_logging: false
