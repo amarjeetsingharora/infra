@@ -11,7 +11,7 @@
         dir: ./yaml
         ignore_files: [controller_config_yml.template]
   roles:
-    - infra.controller_configuration.dispatch
+    - ../..
         
     # - name: Call dispatch role
     #   ansible.builtin.include_role:
