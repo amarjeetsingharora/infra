@@ -3,16 +3,15 @@
   hosts: localhost
   become: false
   gather_facts: false
-  collections:
-    - awx.awx
-    - infra.controller_configuration
+  # collections:
+  #   - infra.controller_configuration
   pre_tasks:
     - name: include vars 
       ansible.builtin.include_vars:
         dir: ./yaml
         ignore_files: [controller_config_yml.template]
   roles:
-    - ../..
+    - infra.controller_configuration.dispatch
         
     # - name: Call dispatch role
     #   ansible.builtin.include_role:
