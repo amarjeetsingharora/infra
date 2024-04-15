@@ -1,5 +1,4 @@
----
-__controller_projects:
+controller_projects:
   - name: Test Project
     scm_type: git
     scm_url: https://github.com/ansible/tower-example.git
