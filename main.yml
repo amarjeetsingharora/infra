@@ -3,6 +3,8 @@
   hosts: localhost
   become: false
   gather_facts: false
+  collections:
+    - infra.controller_configuration
   pre_tasks:
     - name: include vars 
       ansible.builtin.include_vars:
