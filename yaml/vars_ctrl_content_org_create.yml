@@ -35,8 +35,8 @@
 #     organization: PCS-DUMMY
 #     role: admin
 ---
-controller_configuration_projects_async_retries: 60
-controller_configuration_projects_async_delay: 5
+# controller_configuration_projects_async_retries: 60
+# controller_configuration_projects_async_delay: 5
 controller_projects:
   - name: Test Project
     scm_type: git
