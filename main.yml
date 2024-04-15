@@ -4,6 +4,7 @@
   become: false
   gather_facts: false
   collections:
+    - awx.awx
     - infra.controller_configuration
   pre_tasks:
     - name: include vars 
