@@ -10,10 +10,12 @@
       ansible.builtin.include_vars:
         dir: ./yaml
         ignore_files: [controller_config_yml.template]
+  roles:
+    - {role: infra.controller_configuration.projects, when: controller_projects is defined}
         
-    - name: Call dispatch role
-      ansible.builtin.include_role:
-        name: infra.controller_configuration.dispatch
+    # - name: Call dispatch role
+    #   ansible.builtin.include_role:
+    #     name: infra.controller_configuration.dispatch
   # roles:
   #  - {role: infra.controller_configuration.organizations, when: controller_organizations is defined}
   
