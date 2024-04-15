@@ -3,20 +3,12 @@
   hosts: localhost
   become: false
   gather_facts: false
-   
-    # # Using the Tower env names for backwards compatibility
-    # controller_hostname: "{{ lookup('ansible.builtin.env', 'TOWER_HOST') }}"
-    # controller_username: "{{ lookup('ansible.builtin.env', 'TOWER_USERNAME') }}"
-    # controller_password: "{{ lookup('ansible.builtin.env', 'TOWER_PASSWORD') }}"
-    # controller_validate_certs: "{{ lookup('ansible.builtin.env', 'TOWER_VERIFY_SSL') | default(false) }}"
   pre_tasks:
     - name: include vars 
       ansible.builtin.include_vars:
-        dir: ./yaml
+        dir: yaml
         ignore_files: [controller_config_yml.template]
-        extensions:
-          - ["yml"]
-
+        
     - name: Call dispatch role
       ansible.builtin.include_role:
         name: infra.controller_configuration.dispatch
