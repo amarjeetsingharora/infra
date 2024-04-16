@@ -1,3 +1,4 @@
-# ---
-# collections:
-#   - name: infra.controller_configuration
+---
+collections:
+  - infra.controller_configuration
+  - awx.awx

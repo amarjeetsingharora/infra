@@ -3,9 +3,9 @@
   hosts: localhost
   become: false
   gather_facts: false
-  collections:
-    - infra.controller_configuration
-    - awx.awx
+  # collections:
+  #   - infra.controller_configuration
+  #   - awx.awx
   pre_tasks:
     - name: include vars 
       ansible.builtin.include_vars:
