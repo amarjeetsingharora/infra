@@ -1,10 +1,10 @@
 controller_projects:
-  - name: vijay
+  - name: rahul
     scm_type: git
     scm_url: https://github.com/ansible/tower-example.git
     scm_branch: master
     scm_clean: true
-    description: vijay 
+    description: rahul 
     organization: Default
     wait: true
     update_project: true
