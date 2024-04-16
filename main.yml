@@ -3,9 +3,6 @@
   hosts: localhost
   become: false
   gather_facts: false
-  # collections:
-  #   - infra.controller_configuration
-  #   - awx.awx
   pre_tasks:
     - name: include vars 
       ansible.builtin.include_vars:
@@ -13,14 +10,3 @@
         ignore_files: [controller_config_yml.template]
   roles:
     - infra.controller_configuration.dispatch
-        
-    # - name: Call dispatch role
-    #   ansible.builtin.include_role:
-    #     name: infra.controller_configuration.dispatch
-  # roles:
-  #  - {role: infra.controller_configuration.organizations, when: controller_organizations is defined}
-  
-  # tasks:
-  #   - name: include variable
-  #     ansible.builtin.include_vars:
-  #       file: vars_ctrl_content_org_create.yml
