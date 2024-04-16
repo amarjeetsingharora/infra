@@ -1,0 +1,10 @@
+controller_projects:
+  - name: amarjeet
+    scm_type: git
+    scm_url: https://github.com/ansible/tower-example.git
+    scm_branch: master
+    scm_clean: true
+    description: piju 
+    organization: Default
+    wait: true
+    update_project: true
